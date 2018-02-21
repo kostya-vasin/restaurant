@@ -1,0 +1,139 @@
+//global
+html {
+   box-sizing: border-box;
+   -ms-overflow-style: scrollbar;
+
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   max-width: 1600px;
+}
+
+
+//typoghraphy
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700|Lato|Open+Sans:400,700|Yeseva+One');
+
+//fonts names
+$yeseva: 'Yeseva One',
+cursive;
+$lato: 'Lato',
+sans-serif;
+$openSans: 'Open Sans',
+sans-serif;
+$gentium: 'Gentium Book Basic',
+serif;
+
+//text colors
+$white: #ffffff;
+$yellow: #cc9900;
+$black: #4c4c4c;
+
+//text mixin
+@mixin text-styler($font,
+$size,
+$weight,
+$color) {
+   font-family: $font;
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+}
+
+//h2's
+@mixin h2($color) {
+   color: $color;
+   font-family: $yeseva;
+   font-size: 21px;
+   font-weight: 400;
+   line-height: 24px;
+}
+
+//h3's
+@mixin h3($color) {
+   color: $color;
+   font-family: $yeseva;
+   font-size: 36px;
+   font-weight: 400;
+   line-height: 24px;
+}
+
+//most of text
+@mixin text($color) {
+   color: $color;
+   font-family: $lato;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+}
+
+//buttons
+   //base
+@mixin btn_base {
+   color: #ffffff;
+   font-family: $lato;
+   font-size: 18px;
+   font-weight: 400;
+   text-transform: uppercase;
+   padding: 23px 52px 21px 52px ;
+}
+      //white
+@mixin white_button {
+   /* background */
+
+   border: 1px solid #ffffff;
+   background-color: rgba(255, 255, 255, 0.7);
+   
+}
+      //black
+@mixin black_button {
+   /* background */
+  
+   border: 1px solid #000000;
+   background-color: rgba(0, 0, 0, 0.8);
+   
+}
+      //orange
+@mixin orange_button {
+   color: #ffffff;
+   font-family: $openSans;
+   font-size: 16px;
+   font-weight: 400;
+   /* background */
+   width: 200px;
+   height: 36px;
+   border: 1px solid #c89f2d;
+   background-color: #c89f2d;
+}
+
+//flex
+   //flex-centered
+@mixin centerThis {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+   //flex-row
+@mixin row {
+   display: flex;
+   flex-direction: row;
+}
+   //flex-col
+@mixin col {
+   display: flex;
+   flex-direction: column;
+}
+
+//placeholder 
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}

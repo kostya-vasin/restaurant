@@ -1,0 +1,78 @@
+.header {
+   background-image: url(../img/png/bg.png);
+   background-position: center;
+   height: 750px;
+   max-height: 750px;
+   position: relative;
+   z-index: -100;
+   &__wrap {
+      @include row; //make row
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-around;
+      max-width: 1207px;
+   }
+   &__logo {
+      max-height: 92px;
+      z-index: -90;
+   }
+   &__navBg {
+      position: absolute;
+      z-index: -100;
+
+   }
+   &__nav {
+      z-index: -90;
+      max-height: 110px;
+      min-width: 710px;
+      @include text-styler($gentium, 21px, 700, $white);
+      display: flex;
+      justify-content: space-between;
+   }
+   &__navItem {
+      color: $white;
+      text-decoration: none;
+   }
+   &__social {
+      width: 81px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__socialLink {
+      z-index: -90;
+      color: $yellow;
+      text-decoration: none;
+   }
+   &__title {
+      @include text-styler($yeseva, 90px, 400, $white);
+      text-align: center;
+      opacity: 0.92;
+      text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.64);
+      height: 201px;
+      margin-top: 129px;
+      margin-bottom: 34px;
+   }
+   &__diver {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 34px;
+   }
+   &__btns {
+      display: flex;
+      justify-content: center;
+
+
+
+   }
+   &__btn {
+      @include btn_base;
+      @include black_button; text-decoration: none;
+
+      &--white {
+         @include btn_base;
+         @include white_button;
+         margin-left: 30px;
+      }
+   }
+
+}
