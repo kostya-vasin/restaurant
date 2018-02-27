@@ -8,6 +8,9 @@
    background-image: linear-gradient(-43deg, rgba(1, 1, 1, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
    &__bgPattern {
       position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: -100;
    }
    &__content {
       display: flex;
@@ -34,11 +37,7 @@
       @include text ($black);
    }
    &__chefPhoto {
-//      width: 219px;
-//      height: 221px;
-////      position: absolute;
-////      bottom: 0;
-////      right: 59px;
+
       padding-left: 130px;
    }
 }

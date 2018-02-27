@@ -1,0 +1,47 @@
+.menu {
+   box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
+   background-image: linear-gradient(-226deg, rgba(32, 90, 91, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%);
+   height: 994px;
+   &__contentWrap {
+   display: flex;
+   justify-content: space-between;
+      max-width: 1058px;
+      margin: 0 auto;
+padding: 30px;
+      
+   }
+   &__bgPattern {
+      position: absolute;
+      z-index: -100;
+      width: 100%;
+   }
+   &__group {
+      max-width: 434px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__groupTitle {
+      @include text-styler ($yeseva, 24px, 400, $yellow);
+      margin-bottom: 16px;
+   }
+   &__groupItemPriceWrap{
+      width: 434px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      @include text-styler ($yeseva, 21px, 400, $yellow);
+      margin-top: 30px;
+      margin-bottom: 15px;
+      
+   }
+   &__groupItemName {
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+   &__groupItemInfo {
+      @include text-styler ($openSans, 16px, 400, #4c4c4c);
+      width: 434px;
+   }
+}
